@@ -1,5 +1,5 @@
 @Library('piper-lib-os') _
-node() {
+node('k8s-base') {
     agent {
         label "k8s-base"
     }
