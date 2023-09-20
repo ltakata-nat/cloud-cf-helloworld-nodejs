@@ -10,4 +10,7 @@ node('k8s-base') {
     stage('build') {
         mtaBuild script: this
     }
+    stage('deploy') {
+    cloudFoundryDeploy script: this
+}
 }
