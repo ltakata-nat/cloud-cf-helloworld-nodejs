@@ -8,6 +8,6 @@ steps:
     cloudFoundry:
       org: 'naturaeco_CPEA_pocbtpextdevops'
       space: 'dev'
-      credentialsId: 'sap_id_temp'
+      # credentialsId: 'sap_id_temp'
       apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
       loginParameters: '--sso'
