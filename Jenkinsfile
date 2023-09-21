@@ -10,6 +10,9 @@ node('k8s-base') {
     stage('build') {
         mtaBuild script: this
     }
+    stage('Login') {
+        sh 'cf login --sso'
+    }
     stage('deploy') {
     cloudFoundryDeploy script: this
 }
