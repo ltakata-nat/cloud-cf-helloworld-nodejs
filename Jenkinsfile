@@ -11,7 +11,7 @@ node('k8s-base') {
         mtaBuild script: this
     }
     stage('Login') {
-        sh 'cf login --sso'
+        sh 'cf login --sso -a https://api.cf.us10.hana.ondemand.com'
     }
     stage('deploy') {
     cloudFoundryDeploy script: this
