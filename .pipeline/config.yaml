@@ -5,8 +5,7 @@ steps:
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
-    cloudFoundry:
-      org: 'naturaeco_CPEA_pocbtpextdevops'
-      space: 'dev'
-      cfCredentialsId: 'sap_id_temp'
-      apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
+    org: 'naturaeco_CPEA_pocbtpextdevops'
+    space: 'dev'
+    cfCredentialsId: 'sap_id_temp'
+    apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
