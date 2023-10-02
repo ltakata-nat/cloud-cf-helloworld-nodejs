@@ -10,4 +10,3 @@ steps:
       space: 'dev'
       cfCredentialsId: 'sap_id_temp'
       apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
-      # loginParameters: '--sso'
