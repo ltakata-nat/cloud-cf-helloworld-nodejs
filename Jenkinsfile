@@ -7,12 +7,15 @@ node('k8s-base') {
         checkout scm
         setupCommonPipelineEnvironment script:this
     }
+    stage('Install Dependencies') {
+        sh 'npm install'        
+    }
     stage('build') {
         mtaBuild script: this
     }
-    // stage('Login') {
-    //     sh 'cf login --sso -a https://api.cf.us10.hana.ondemand.com'
-    // }
+    stage('Install Plugins') {
+        sh 'cf install-plugin multiapps -f'
+    }
     stage('deploy') {
     cloudFoundryDeploy script: this
 }
